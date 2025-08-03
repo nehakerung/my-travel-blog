@@ -7,7 +7,8 @@ from .models import Trip
 
 
 def trips_page(request):
-    return render(request, "basic.html")
+    # return render(request, "basic.html")
+    return render(request, "trip_page.html")
 
     # if Trip:
     #     posts = Trip.objects.all()

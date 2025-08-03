@@ -1,6 +1,7 @@
-{% comment %} {%extends 'base.html'%}
+{%extends 'base.html'%}
 {% block content %}
 {% for post in posts%}
-<h1>{post.country}</h1>
-<p>Supposed to be trip page</p> {% endcomment %}
-
+{% comment %} <h1>{post.country}</h1>{% endcomment %}
+<p>Supposed to be trip page</p> 
+{% endfor %}
+{% endblock content %}
