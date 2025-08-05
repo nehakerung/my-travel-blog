@@ -1,14 +1,23 @@
-brew services start mysql
+# My Travel Blog
+This is a travel blog used to showcase my personal travels. It uses a django framework and mysql database.
 
-1. fix pages
-2. db
+## How to run locally
+### Pre-requisites
+1. Python
+2. Pyenv
+3. mysql
 
-[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
-
-# random note
-
+### Clone repo
 ```
-pylint my_travel_blog
+git clone
 
-black folder
+poetry install
 ```
+### Linters
+```
+pylint dir
+
+black dir
+```
+
+## Licenses
