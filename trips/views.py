@@ -1,12 +1,10 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-
-from .models import Trip
 
 # Create your views here.
 
 
 def trips_page(request):
+    """At the moment - returns a basic html page."""
     # return render(request, "basic.html")
     return render(request, "trip_page.html")
 

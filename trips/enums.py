@@ -1,3 +1,5 @@
+"""Module providing enums used to select attendance."""
+
 from django.db import models
 
 
