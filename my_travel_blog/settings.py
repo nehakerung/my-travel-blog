@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -33,6 +32,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "my_travel_blog",
     "trips",
+    "users",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -56,7 +56,7 @@ ROOT_URLCONF = "my_travel_blog.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -78,7 +78,7 @@ WSGI_APPLICATION = "my_travel_blog.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "mydb",  # Your actual MySQL database
+        "NAME": "mydb",  # Your actual MySQL
         "USER": "myuser",  # The new user you created
         "PASSWORD": "mypassword",
         "HOST": "127.0.0.1",  # Use IP instead of 'localhost'
