@@ -1,14 +1,14 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.template import loader
 
-# Create your views here.
+from .models import Trip
 
 
 def trips_page(request):
     """At the moment - returns a basic html page."""
-    # return render(request, "basic.html")
-    return render(request, "trip_page.html")
-
-    # if Trip:
-    #     posts = Trip.objects.all()
-    #     return render(request, "templates/trips_page.html", {"posts": posts})
-    # else:
+    trips = Trip.objects.all().values()
+    template = loader.get_template("trip_page.html")
+    context = {
+        "trips": trips,
+    }
+    return HttpResponse(template.render(context, request))

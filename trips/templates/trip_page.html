@@ -1,7 +1,16 @@
-{%extends 'base.html'%}
-{% block content %}
-{% for post in posts%}
-{% comment %} <h1>{post.country}</h1>{% endcomment %}
-<p>Supposed to be trip page</p> 
-{% endfor %}
-{% endblock content %}
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello World!</h1>
+<p>Welcome to my first Django project!</p>
+
+        {% for trip in trips %}
+            <h3>{{ trip.country}}</h3>
+            <h3>Attendance: {{trip.attendance}}<h3>
+            <p>The trip started at {{trip.start_date}} and ended {{trip.end_date}}.</p>
+        {% endfor %}
+
+
+</body>
+</html>
