@@ -35,3 +35,5 @@ poetry run python manage.py createsuperuser
 ```
 make lint
 ```
+
+Test 
