@@ -28,12 +28,10 @@ mysql>
 ```
 make dev-init
 
-poetry run python manage.py createsuperuser --username admin --email admin@example.com --password changeme
+poetry run python manage.py createsuperuser
 
 ```
 ### Linters
 ```
 make lint
 ```
-
-Edittt
