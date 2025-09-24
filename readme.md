@@ -13,11 +13,27 @@ git clone
 
 poetry install
 ```
+### Set up MySQL database
+(While in development)
+```
+mysql -u root
+
+mysql> 
+    CREATE DATABASE mydb CHARACTER SET UTF8;
+	CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypassword';
+	GRANT ALL PRIVILEGES ON mydb.* TO 'myuser'@'%';
+	FLUSH PRIVILEGES;
+```
+
+```
+make dev-init
+
+poetry run python manage.py createsuperuser
+
+```
 ### Linters
 ```
-pylint dir
-
-black dir
+make lint
 ```
 
-## Licenses
+Test 

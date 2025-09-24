@@ -10,3 +10,12 @@ start:
 stop:
 # stop mysql connection
 	brew services stop mysql
+
+.PHONY: dev-init
+dev-init:
+	poetry run python manage.py migrate
+
+.PHONY: lint
+lint:
+	poetry run pylint my_travel_blog
+	poetry run black my_travel_blog --check
